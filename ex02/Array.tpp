@@ -6,7 +6,7 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 15:24:44 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2025/07/15 17:22:52 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2025/07/15 17:51:59 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@
 
 template<typename T>
 Array<T>::Array(): _size(0)
-{
-	//_array = new T[_size];
-}
+{}
 
 template<typename T>
 Array<T>::Array(unsigned int size): _size(size)
@@ -39,7 +37,7 @@ template<typename T>
 Array<T> &Array<T>::operator=(Array const &copy)
 {
 	if (this->_size != 0)
-		delete this->_array;
+		delete [] this->_array;
 	this->_array = new T[copy.size()];
 	this->_size = copy.size();
 	for(unsigned int i = 0; i < copy.size(); i++)
@@ -57,6 +55,8 @@ Array<T>::~Array()
 template <typename T>
 T &Array<T>::operator[](unsigned int i) const
 {
+	if (i >= _size)
+		throw Array<T>::BoundsException();
 	return _array[i];
 }
 
@@ -71,7 +71,7 @@ template <typename T>
 std::ostream &operator<<(std::ostream &out, const Array<T> &array)
 {
 	for (unsigned int i = 0; i < array.size(); i++)
-		out << array[i];
+		out << array[i] << " ";
 	return out;
 }
 

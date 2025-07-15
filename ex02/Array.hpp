@@ -6,7 +6,7 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 14:50:55 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2025/07/15 17:05:51 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2025/07/15 17:55:21 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <string>
 #include <iostream>
+#include <exception>
 
 template <typename T>
 class Array
@@ -33,6 +34,12 @@ class Array
 		T &operator[](unsigned int i) const;
 		
 		unsigned int size() const;
+
+		class BoundsException: public std::exception
+		{
+			public:
+				virtual char const *what(void) const throw() {return "Out of array bounds";};
+		};
 };
 
 template <typename T>
