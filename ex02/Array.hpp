@@ -6,7 +6,7 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 14:50:55 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2025/07/15 16:13:56 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2025/07/15 17:05:51 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,13 @@ class Array
 		Array &operator=(Array const &copy);
 		~Array();
 
-		// T &operator[](unsigned int i);
+		T &operator[](unsigned int i) const;
 		
-		// unsigned int size();
+		unsigned int size() const;
 };
+
+template <typename T>
+std::ostream &operator<<(std::ostream &out, const Array<T> &array);
 
 #include "Array.tpp"
 

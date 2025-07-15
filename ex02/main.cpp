@@ -6,7 +6,7 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 14:31:39 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2025/07/15 16:13:25 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2025/07/15 17:11:48 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,14 @@ int main()
 	Array<int> a;
 	
 	Array<int> b(5);
+	b[0] = 1;
+	b[1] = 3;
+	b[2] = 4;
+	b[3] = 8;
+	b[4] = 10;
 
-	Array<int> c;
+	Array<int> c(b);
 
-	c = b;
+	std::cout << "b = " << b << std::endl;
+	std::cout << "c = " << c << std::endl;
 }
