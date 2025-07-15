@@ -6,14 +6,13 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 11:08:32 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2025/07/15 11:44:25 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2025/07/15 11:46:45 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "whatever.hpp"
 
-int
-main( void )
+int main()
 {
 	int a = 2;
 	int b = 3;
