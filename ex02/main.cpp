@@ -6,7 +6,7 @@
 /*   By: fdi-cecc <fdi-cecc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 14:31:39 by fdi-cecc          #+#    #+#             */
-/*   Updated: 2025/07/15 17:57:42 by fdi-cecc         ###   ########.fr       */
+/*   Updated: 2025/07/15 17:59:27 by fdi-cecc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,14 @@ int main()
 	
 	Array<std::string> h(f);
 	
+	std::cout << "e size = " << e.size() << std::endl;
 	std::cout << "e = " << e << std::endl;
+	std::cout << "f size = " << f.size() << std::endl;
 	std::cout << "f = " << f << std::endl;
 	std::cout << "g = " << g << std::endl;
 	std::cout << "h = " << h << std::endl;
 
+	
 	try
 	{
 		std::cout << h[0] << std::endl;
